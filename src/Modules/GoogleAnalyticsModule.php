@@ -101,12 +101,12 @@ class GoogleAnalyticsModule extends AbstractModule
         $options = parent::processOptions($options);
 
         if (isset($options->options)) {
-            $options->google_analytics_id = $options->options;
+            $options->ga4_id = $options->options;
             unset($options->options);
         }
 
         if (!$options->should_load) {
-            $options->should_load = !empty($options->google_analytics_id)
+            $options->should_load = !empty($options->ga4_id)
                 && is_production_environment()
                 && !current_user_can('manage_options');
         }
