@@ -48,6 +48,17 @@ class GoogleAnalyticsModule extends AbstractModule
          * @var string
          */
         'google_analytics_id' => null,
+        
+        /**
+         * GA4 Measurement ID
+         *
+         * This is also known as your "property ID" or "measurement ID"
+         *
+         * Format: G-XXXXXXXXXX
+         *
+         * @var string
+         */
+        'ga4_id' => null,
 
         /**
          * Optimize container ID
