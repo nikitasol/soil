@@ -8,6 +8,8 @@
   gtag('js', new Date());
 
   gtag('config', '<?= $ga4_id ?>');
+  <?php if ($google_analytics_id) : ?>
   gtag('config', '<?= $google_analytics_id ?>'{<?php if ($anonymize_ip) : ?>, 'anonymize_ip': true<?php endif; ?><?php if ($optimize_id) : ?>, 'optimize_id': '<?= $optimize_id; ?>'});<?php endif; ?>
+  <?php endif; ?>
 </script>
 <?php endif; ?>
